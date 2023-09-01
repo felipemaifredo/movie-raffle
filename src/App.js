@@ -1,7 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
 import { AiOutlineCloseSquare } from "react-icons/ai";
- 
+import rulleteGif from './ruleta.gif';
+
 function App() {
   const [films, setFilms] = useState([]);
   const [inputFilm, setInputFilm] = useState('');
@@ -24,14 +25,20 @@ function App() {
   };
 
   const randomizeFilms = () => {
+    let rullete = document.querySelector('div.container-rullete')
+  
     if (films.length === 0) {
       alert('Adicione filmes antes de sortear.');
       return;
     }
-
+    rullete.classList.add('container-rullete-on');
     const randomIndex = Math.floor(Math.random() * films.length);
     const randomSelectedFilm = films[randomIndex];
     setRandomFilm(randomSelectedFilm);
+
+    setTimeout(() => {
+      rullete.classList.remove('container-rullete-on');
+    }, 5000);
   };
 
   return (
@@ -70,6 +77,11 @@ function App() {
           )}
         </div>
       </div>
+
+      <div className='container-rullete'>
+        <img src={rulleteGif} alt='roleta' />
+      </div>
+
     </div>
   );
 }
