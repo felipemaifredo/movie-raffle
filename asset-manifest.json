@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/movie-raffle/static/css/main.7e6fdb15.css",
-    "main.js": "/movie-raffle/static/js/main.b8bccd1c.js",
+    "main.css": "/movie-raffle/static/css/main.a3a95c4a.css",
+    "main.js": "/movie-raffle/static/js/main.428e207c.js",
     "static/js/787.bb98de8e.chunk.js": "/movie-raffle/static/js/787.bb98de8e.chunk.js",
+    "static/media/ruleta.gif": "/movie-raffle/static/media/ruleta.bc5d537dba823c702213.gif",
     "index.html": "/movie-raffle/index.html",
-    "main.7e6fdb15.css.map": "/movie-raffle/static/css/main.7e6fdb15.css.map",
-    "main.b8bccd1c.js.map": "/movie-raffle/static/js/main.b8bccd1c.js.map",
+    "main.a3a95c4a.css.map": "/movie-raffle/static/css/main.a3a95c4a.css.map",
+    "main.428e207c.js.map": "/movie-raffle/static/js/main.428e207c.js.map",
     "787.bb98de8e.chunk.js.map": "/movie-raffle/static/js/787.bb98de8e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e6fdb15.css",
-    "static/js/main.b8bccd1c.js"
+    "static/css/main.a3a95c4a.css",
+    "static/js/main.428e207c.js"
   ]
 }
