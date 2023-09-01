@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/movie-raffle/static/css/main.7e6fdb15.css",
+    "main.js": "/movie-raffle/static/js/main.b8bccd1c.js",
+    "static/js/787.bb98de8e.chunk.js": "/movie-raffle/static/js/787.bb98de8e.chunk.js",
+    "index.html": "/movie-raffle/index.html",
+    "main.7e6fdb15.css.map": "/movie-raffle/static/css/main.7e6fdb15.css.map",
+    "main.b8bccd1c.js.map": "/movie-raffle/static/js/main.b8bccd1c.js.map",
+    "787.bb98de8e.chunk.js.map": "/movie-raffle/static/js/787.bb98de8e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e6fdb15.css",
+    "static/js/main.b8bccd1c.js"
+  ]
+}
