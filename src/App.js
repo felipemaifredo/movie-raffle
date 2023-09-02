@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import rulleteGif from './ruleta.gif';
 
@@ -14,14 +14,21 @@ function App() {
       return;
     }
 
+    const updatedFilms = [...films, inputFilm];
     setFilms([...films, inputFilm]);
     setInputFilm('');
+
+    // Atualizar o localStorage com a lista de filmes
+    localStorage.setItem('films', JSON.stringify(updatedFilms));
   };
 
   const removeFilm = (index) => {
     const updatedFilms = [...films];
     updatedFilms.splice(index, 1);
     setFilms(updatedFilms);
+
+    // Atualizar o localStorage com a lista de filmes
+    localStorage.setItem('films', JSON.stringify(updatedFilms));
   };
 
   const randomizeFilms = () => {
@@ -40,6 +47,14 @@ function App() {
       rullete.classList.remove('container-rullete-on');
     }, 5000);
   };
+
+  // Carregar a lista de filmes do localStorage quando o componente é montado
+  useEffect(() => {
+    const storedFilms = localStorage.getItem('films');
+    if (storedFilms) {
+      setFilms(JSON.parse(storedFilms));
+    }
+  }, []);
 
   return (
     <div className="App">
