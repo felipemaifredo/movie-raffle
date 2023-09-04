@@ -1,12 +1,14 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import rulleteGif from './ruleta.gif';
+import meuAudio from './audio.mp3';
 
 function App() {
   const [films, setFilms] = useState([]);
   const [inputFilm, setInputFilm] = useState('');
   const [randomFilm, setRandomFilm] = useState('');
+  const audioRef = useRef(null);
 
   const addFilm = () => {
     if (!inputFilm) {
@@ -43,9 +45,19 @@ function App() {
     const randomSelectedFilm = films[randomIndex];
     setRandomFilm(randomSelectedFilm);
 
+    // Reproduzir o áudio quando o botão de sorteio é clicado
+    playAudio();
+
     setTimeout(() => {
       rullete.classList.remove('container-rullete-on');
-    }, 5000);
+    }, 11000);
+  };
+
+  // Função para reproduzir o áudio
+  const playAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
   };
 
   // Carregar a lista de filmes do localStorage quando o componente é montado
@@ -96,7 +108,7 @@ function App() {
       <div className='container-rullete'>
         <img src={rulleteGif} alt='roleta' />
       </div>
-
+      <audio ref={audioRef} src={meuAudio} volume={0.5} />
     </div>
   );
 }
