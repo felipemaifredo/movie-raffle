@@ -45,9 +45,15 @@ h1 {
   padding: 5px;
 }
 
+.film-item p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .film-item button {
   height: 100%;
-  width: 10%;
+  width: 15%;
   background-color: transparent;
   border: none;
   display: grid;
@@ -86,4 +92,21 @@ h1 {
   z-index: 1;
   opacity: 1;
   pointer-events: all;
+}
+
+
+#box-select-film {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-filme-btn {
+  height: 29px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  
 }

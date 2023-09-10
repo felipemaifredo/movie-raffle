@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineCloseSquare } from "react-icons/ai";
+
 import rulleteGif from './ruleta.gif';
 import meuAudio from './audio.mp3';
 
@@ -68,13 +69,22 @@ function App() {
     }
   }, []);
 
+  const CreateCardFilm = ({ title, index }) => {
+    return (
+      <div key={index} className="film-item">
+        <p>{title}</p>
+        <button onClick={() => removeFilm(index)}> <AiOutlineCloseSquare /> </button>
+      </div>
+    );
+  };
+
   return (
     <div className="App">
       <h1>Noite de Filme</h1>
       <div>
         <div className='films-addeds'>
           <div className='selectores-box'>
-            <div>
+            <div id='box-select-film'>
               <input 
                   type='text'
                   placeholder='Adicione o filme'
@@ -82,15 +92,12 @@ function App() {
                   value={inputFilm}
                   onChange={(e) => setInputFilm(e.target.value)}
                 />
-              <button onClick={addFilm}>Adicionar</button>
+              <button id='add-filme-btn' onClick={addFilm}> + </button>
             </div>
             <div className='films-box'>
-              {films.map((film, index) => (
-                <div key={index} className="film-item">
-                  <p>{film}</p>
-                  <button onClick={() => removeFilm(index)}> <AiOutlineCloseSquare /> </button>
-                </div>
-              ))}
+            {films.map((film, index) => (
+              <CreateCardFilm key={index} title={film} />
+            ))}
             </div>
           </div>
         </div>
@@ -104,7 +111,6 @@ function App() {
           )}
         </div>
       </div>
-
       <div className='container-rullete'>
         <img src={rulleteGif} alt='roleta' />
       </div>
