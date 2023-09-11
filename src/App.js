@@ -71,7 +71,7 @@ function App() {
 
   const CreateCardFilm = ({ title, index }) => {
     return (
-      <div key={index} className="film-item">
+      <div key={index} className="film-item" index={index} >
         <p>{title}</p>
         <button onClick={() => removeFilm(index)}> <AiOutlineCloseSquare /> </button>
       </div>
@@ -96,7 +96,7 @@ function App() {
             </div>
             <div className='films-box'>
             {films.map((film, index) => (
-              <CreateCardFilm key={index} title={film} />
+              <CreateCardFilm key={index} title={film} index={index} />
             ))}
             </div>
           </div>
