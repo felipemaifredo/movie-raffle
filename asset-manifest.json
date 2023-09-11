@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/movie-raffle/static/css/main.a14db79e.css",
-    "main.js": "/movie-raffle/static/js/main.d67f8c81.js",
+    "main.js": "/movie-raffle/static/js/main.3b2549d0.js",
     "static/js/787.bb98de8e.chunk.js": "/movie-raffle/static/js/787.bb98de8e.chunk.js",
     "static/media/ruleta.gif": "/movie-raffle/static/media/ruleta.bc5d537dba823c702213.gif",
     "static/media/audio.mp3": "/movie-raffle/static/media/audio.ae1dcfd814b0226dc171.mp3",
     "index.html": "/movie-raffle/index.html",
     "main.a14db79e.css.map": "/movie-raffle/static/css/main.a14db79e.css.map",
-    "main.d67f8c81.js.map": "/movie-raffle/static/js/main.d67f8c81.js.map",
+    "main.3b2549d0.js.map": "/movie-raffle/static/js/main.3b2549d0.js.map",
     "787.bb98de8e.chunk.js.map": "/movie-raffle/static/js/787.bb98de8e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a14db79e.css",
-    "static/js/main.d67f8c81.js"
+    "static/js/main.3b2549d0.js"
   ]
 }
